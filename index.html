@@ -1,15 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kenya Tax Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-    <div>
-        <p>Tax Calculator</p>
+
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="#">
+                🇰🇪 TaxCalc
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-3">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            Calculator
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tax_info">
+                            Tax Info
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://itax.kra.go.ke" target="_blank">
+                            KRA iTax
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.ecitizen.go.ke" target="_blank">
+                            eCitizen
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container py-5">
+
+        <div class="row g-4">
+
+
+            <div class="col-md-4">
+                <div class="card shadow p-4">
+
+                    <h3 class="mb-4 text-success">
+                        Salary Input
+                    </h3>
+
+                    <form id="tax_form">
+
+                        <div class="mb-3">
+                            <label for="basic_salary" class="form-label">
+                                Basic Salary
+                            </label>
+
+                            <input type="number" id="basic_salary" class="form-control" placeholder="Enter basic salary"
+                                required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="benefits" class="form-label">
+                                Benefits
+                            </label>
+
+                            <input type="number" id="benefits" class="form-control" placeholder="Enter benefits"
+                                required>
+                        </div>
+
+                        <button type="submit" class="btn btn-success w-100">
+                            Calculate Tax
+                        </button>
+
+                        <button type="reset" class="btn btn-secondary mt-2 w-100">
+                            Reset
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="col-md-8">
+                <div class="card shadow p-4">
+
+                    <h3 class="mb-4 text-success">
+                        Tax Breakdown
+                    </h3>
+
+                    <table class="table table-bordered table-striped table-hover">
+
+                        <thead class="table-success">
+                            <tr>
+                                <th>Tax Category</th>
+                                <th>Amount (KES)</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Gross Salary</td>
+                                <td id="gross"></td>
+                            </tr>
+
+                            <tr>
+                                <td>NHIF</td>
+                                <td id="nhif"></td>
+                            </tr>
+
+                            <tr>
+                                <td>NSSF</td>
+                                <td id="nssf"></td>
+                            </tr>
+
+                            <tr>
+                                <td>NHDF</td>
+                                <td id="nhdf"></td>
+                            </tr>
+
+                            <tr>
+                                <td>Taxable Income</td>
+                                <td id="taxable_income"></td>
+                            </tr>
+
+                            <tr>
+                                <td>PAYEE</td>
+                                <td id="payee"></td>
+                            </tr>
+
+                            <tr class="table-success fw-bold">
+                                <td>Net Salary</td>
+                                <td id="net_salary"></td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+
+        </div>
     </div>
 
+    <div class="container py-5" id="tax_info">
+
+        <h1>Kenyan Tax Information</h1>
+
+        <div class="card p-4 mb-4">
+            <h3>PAYE Tax Bands</h3>
+            <ul>
+                <li>0 – 24,000 → 10%</li>
+                <li>24,001 – 32,333 → 25%</li>
+                <li>32,334 – 500,000 → 30%</li>
+                <li>500,001 – 800,000 → 32.5%</li>
+                <li>Above 800,000 → 35%</li>
+                <li>Minimum Taxable Income: KES 24,001.00 per month</li>
+            </ul>
+        </div>
+
+        <div class="card p-4 mb-4">
+            <h3>NHIF / SHA Information</h3>
+            <p>
+                NHIF is transitioning toward SHIF (Social Health Insurance Fund).
+            </p>
+        </div>
+
+        <div class="card p-4 mb-4">
+            <h3 class="mb-3">NHIF Contribution Table</h3>
+
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped table-hover">
+                    <thead class="table-success">
+                        <tr>
+                            <th>Gross Salary (KES)</th>
+                            <th>NHIF Contribution (KES)</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>0 – 5,999</td>
+                            <td>150</td>
+                        </tr>
+                        <tr>
+                            <td>6,000 – 7,999</td>
+                            <td>300</td>
+                        </tr>
+                        <tr>
+                            <td>8,000 – 11,999</td>
+                            <td>400</td>
+                        </tr>
+                        <tr>
+                            <td>12,000 – 14,999</td>
+                            <td>500</td>
+                        </tr>
+                        <tr>
+                            <td>15,000 – 19,999</td>
+                            <td>600</td>
+                        </tr>
+                        <tr>
+                            <td>20,000 – 24,999</td>
+                            <td>750</td>
+                        </tr>
+                        <tr>
+                            <td>25,000 – 29,999</td>
+                            <td>850</td>
+                        </tr>
+                        <tr>
+                            <td>30,000 – 34,999</td>
+                            <td>900</td>
+                        </tr>
+                        <tr>
+                            <td>35,000 – 39,999</td>
+                            <td>950</td>
+                        </tr>
+                        <tr>
+                            <td>40,000 – 44,999</td>
+                            <td>1,000</td>
+                        </tr>
+                        <tr>
+                            <td>45,000 – 49,999</td>
+                            <td>1,100</td>
+                        </tr>
+                        <tr>
+                            <td>50,000 – 59,999</td>
+                            <td>1,200</td>
+                        </tr>
+                        <tr>
+                            <td>60,000 – 69,999</td>
+                            <td>1,300</td>
+                        </tr>
+                        <tr>
+                            <td>70,000 – 79,999</td>
+                            <td>1,400</td>
+                        </tr>
+                        <tr>
+                            <td>80,000 – 89,999</td>
+                            <td>1,500</td>
+                        </tr>
+                        <tr>
+                            <td>90,000 – 99,999</td>
+                            <td>1,600</td>
+                        </tr>
+                        <tr class="table-success fw-bold">
+                            <td>100,000 and above</td>
+                            <td>1,700</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="card p-4 mb-4">
+            <h3>NHDF (Housing Levy)</h3>
+            <p>
+                1.5% of gross salary.
+            </p>
+        </div>
+
+        <a href="index.html" class="btn btn-success">
+            Back to Calculator
+        </a>
+
+    </div>
+
+
     <script src="tax.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
+
 </html>
