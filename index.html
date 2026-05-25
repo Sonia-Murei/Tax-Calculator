@@ -13,7 +13,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold fs-4" href="#">
-                🇰🇪 TaxCalc
+                KenTax<sup>PRO</sup>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -66,7 +66,7 @@
 
                     <form id="tax_form">
 
-                        <div class="mb-3">
+                        <div class="mb-3 fw-bold">
                             <label for="basic_salary" class="form-label">
                                 Basic Salary
                             </label>
@@ -75,7 +75,7 @@
                                 required>
                         </div>
 
-                        <div class="mb-3">
+                        <div class="mb-3 fw-bold">
                             <label for="benefits" class="form-label">
                                 Benefits
                             </label>
@@ -156,120 +156,174 @@
         </div>
     </div>
 
+    <div class="container py-4" id="about">
+
+        <h2 class="text-success mb-4 text-center">
+            Why Use KenTax PRO?
+        </h2>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card shadow-sm h-100 border-0 p-3 text-center">
+                    <h5 class="text-success">Fast Calculations</h5>
+                    <p class="text-muted mb-0">
+                        Instantly calculate PAYE, NHIF, NSSF, NHDF, and your net salary in seconds.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card shadow-sm h-100 border-0 p-3 text-center">
+                    <h5 class="text-success">Accurate & Reliable</h5>
+                    <p class="text-muted mb-0">
+                        Built using Kenyan tax rates to help you verify deductions confidently.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card shadow-sm h-100 border-0 p-3 text-center">
+                    <h5 class="text-success">Simple to Use</h5>
+                    <p class="text-muted mb-0">
+                        Just enter your salary and benefits to get a full tax breakdown instantly.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
     <div class="container py-5" id="tax_info">
 
-        <h1>Kenyan Tax Information</h1>
+        <h1 class="text-center">Kenyan Tax Information</h1>
 
         <div class="card p-4 mb-4">
-            <h3>PAYE Tax Bands</h3>
-            <ul>
-                <li>0 – 24,000 → 10%</li>
-                <li>24,001 – 32,333 → 25%</li>
-                <li>32,334 – 500,000 → 30%</li>
-                <li>500,001 – 800,000 → 32.5%</li>
-                <li>Above 800,000 → 35%</li>
-                <li>Minimum Taxable Income: KES 24,001.00 per month</li>
-            </ul>
-        </div>
-
-        <div class="card p-4 mb-4">
-            <h3>NHIF / SHA Information</h3>
-            <p>
-                NHIF is transitioning toward SHIF (Social Health Insurance Fund).
-            </p>
-        </div>
-
-        <div class="card p-4 mb-4">
-            <h3 class="mb-3">NHIF Contribution Table</h3>
-
-            <div class="table-responsive">
-                <table class="table table-bordered table-striped table-hover">
-                    <thead class="table-success">
-                        <tr>
-                            <th>Gross Salary (KES)</th>
-                            <th>NHIF Contribution (KES)</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td>0 – 5,999</td>
-                            <td>150</td>
-                        </tr>
-                        <tr>
-                            <td>6,000 – 7,999</td>
-                            <td>300</td>
-                        </tr>
-                        <tr>
-                            <td>8,000 – 11,999</td>
-                            <td>400</td>
-                        </tr>
-                        <tr>
-                            <td>12,000 – 14,999</td>
-                            <td>500</td>
-                        </tr>
-                        <tr>
-                            <td>15,000 – 19,999</td>
-                            <td>600</td>
-                        </tr>
-                        <tr>
-                            <td>20,000 – 24,999</td>
-                            <td>750</td>
-                        </tr>
-                        <tr>
-                            <td>25,000 – 29,999</td>
-                            <td>850</td>
-                        </tr>
-                        <tr>
-                            <td>30,000 – 34,999</td>
-                            <td>900</td>
-                        </tr>
-                        <tr>
-                            <td>35,000 – 39,999</td>
-                            <td>950</td>
-                        </tr>
-                        <tr>
-                            <td>40,000 – 44,999</td>
-                            <td>1,000</td>
-                        </tr>
-                        <tr>
-                            <td>45,000 – 49,999</td>
-                            <td>1,100</td>
-                        </tr>
-                        <tr>
-                            <td>50,000 – 59,999</td>
-                            <td>1,200</td>
-                        </tr>
-                        <tr>
-                            <td>60,000 – 69,999</td>
-                            <td>1,300</td>
-                        </tr>
-                        <tr>
-                            <td>70,000 – 79,999</td>
-                            <td>1,400</td>
-                        </tr>
-                        <tr>
-                            <td>80,000 – 89,999</td>
-                            <td>1,500</td>
-                        </tr>
-                        <tr>
-                            <td>90,000 – 99,999</td>
-                            <td>1,600</td>
-                        </tr>
-                        <tr class="table-success fw-bold">
-                            <td>100,000 and above</td>
-                            <td>1,700</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div style="padding-left: 50px; font-size: larger;">
+                <h3 class="text-success">PAYE Tax Bands</h3>
+                <p class="fs-5 mb-3">
+                    PAYE (Pay As You Earn) is the income tax deducted monthly based on your taxable salary and the
+                    applicable tax band.
+                </p>
+                <ul> <strong>
+                        <li>0 – 24,000 → 10%</li>
+                        <li>24,001 – 32,333 → 25%</li>
+                        <li>32,334 – 500,000 → 30%</li>
+                        <li>500,001 – 800,000 → 32.5%</li>
+                        <li>Above 800,000 → 35%</li>
+                    </strong>
+                    <li>Minimum Taxable Income:<strong> KES 24,001.00</strong> per month</li>
+                </ul>
             </div>
         </div>
 
         <div class="card p-4 mb-4">
-            <h3>NHDF (Housing Levy)</h3>
-            <p>
-                1.5% of gross salary.
-            </p>
+            <div style="padding-left: 50px; font-size: larger;">
+                <h3 class="text-success">NHIF / SHA Information</h3>
+                <p>
+                    NHIF is transitioning toward <strong>SHIF (Social Health Insurance Fund)</strong>, which manages
+                    the new SHIF contributions for universal health coverage in Kenya.
+                </p>
+            </div>
+        </div>
+
+        <div class="card p-4 mb-4">
+            <div style="padding-left: 50px; font-size: larger;">
+                <h3 class="mb-3 text-success">NHIF Contribution Table</h3>
+
+
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped table-hover">
+                        <thead class="table-success">
+                            <tr>
+                                <th>Gross Salary (KES)</th>
+                                <th>NHIF Contribution (KES)</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>0 – 5,999</td>
+                                <td>150</td>
+                            </tr>
+                            <tr>
+                                <td>6,000 – 7,999</td>
+                                <td>300</td>
+                            </tr>
+                            <tr>
+                                <td>8,000 – 11,999</td>
+                                <td>400</td>
+                            </tr>
+                            <tr>
+                                <td>12,000 – 14,999</td>
+                                <td>500</td>
+                            </tr>
+                            <tr>
+                                <td>15,000 – 19,999</td>
+                                <td>600</td>
+                            </tr>
+                            <tr>
+                                <td>20,000 – 24,999</td>
+                                <td>750</td>
+                            </tr>
+                            <tr>
+                                <td>25,000 – 29,999</td>
+                                <td>850</td>
+                            </tr>
+                            <tr>
+                                <td>30,000 – 34,999</td>
+                                <td>900</td>
+                            </tr>
+                            <tr>
+                                <td>35,000 – 39,999</td>
+                                <td>950</td>
+                            </tr>
+                            <tr>
+                                <td>40,000 – 44,999</td>
+                                <td>1,000</td>
+                            </tr>
+                            <tr>
+                                <td>45,000 – 49,999</td>
+                                <td>1,100</td>
+                            </tr>
+                            <tr>
+                                <td>50,000 – 59,999</td>
+                                <td>1,200</td>
+                            </tr>
+                            <tr>
+                                <td>60,000 – 69,999</td>
+                                <td>1,300</td>
+                            </tr>
+                            <tr>
+                                <td>70,000 – 79,999</td>
+                                <td>1,400</td>
+                            </tr>
+                            <tr>
+                                <td>80,000 – 89,999</td>
+                                <td>1,500</td>
+                            </tr>
+                            <tr>
+                                <td>90,000 – 99,999</td>
+                                <td>1,600</td>
+                            </tr>
+                            <tr class="table-success fw-bold">
+                                <td>100,000 and above</td>
+                                <td>1,700</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="card p-4 mb-4">
+            <div style="padding-left: 50px; font-size: larger;">
+                <h3 class="text-success">NHDF (Housing Levy)</h3>
+                <p class="">
+                    The National Housing Development Fund (NHDF) supports affordable housing initiatives through a
+                    mandatory employee contribution of <strong>1.5%</strong> of the gross salary.
+                </p>
+            </div>
         </div>
 
         <a href="index.html" class="btn btn-success">
@@ -278,6 +332,17 @@
 
     </div>
 
+    <footer class="bg-dark text-white text-center py-5 mt-5 shadow-sm">
+        <div class="container">
+            <p class="mb-1">
+                &copy; 2026 KenTax<sup>PRO</sup>. All rights reserved.
+            </p>
+
+            <small class="text-light">
+                Kenyan PAYE • NHIF • NSSF • NHDF Calculator
+            </small>
+        </div>
+    </footer>
 
     <script src="tax.js"></script>
 

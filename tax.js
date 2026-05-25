@@ -19,7 +19,7 @@ document.getElementById("tax_form").addEventListener('submit',function(event){
     // Calling
 
     let grossSalary = calcGross(basic_salary, benefits)
-    document.getElementById('gross').innerHTML = grossSalary
+    document.getElementById('gross').innerHTML = grossSalary.toFixed(2)
 
 
     // 2. NHIF
@@ -69,7 +69,7 @@ document.getElementById("tax_form").addEventListener('submit',function(event){
     // Calling
 
     let nhif = calcNHIF(grossSalary)
-    document.getElementById('nhif').innerHTML = nhif
+    document.getElementById('nhif').innerHTML = nhif.toFixed(2)
 
     // 3. NSSF
     // Continue with the program above, then use  the gross salary to find the NSSF. 
@@ -91,7 +91,7 @@ document.getElementById("tax_form").addEventListener('submit',function(event){
     // Calling
 
     let nssf = calcNSSF(grossSalary)
-    document.getElementById('nssf').innerHTML = nssf
+    document.getElementById('nssf').innerHTML = nssf.toFixed(2)
 
     // 4. NHDF
     // Continue with the same program and calculate an individual’s NHDF using:
@@ -104,7 +104,7 @@ document.getElementById("tax_form").addEventListener('submit',function(event){
     // Calling
 
     let nhdf = calcNHDF(grossSalary)
-    document.getElementById('nhdf').innerHTML = nhdf
+    document.getElementById('nhdf').innerHTML = nhdf.toFixed(2)
 
     // 5. Taxable Income
     // Calculate the taxable income.
@@ -117,7 +117,7 @@ document.getElementById("tax_form").addEventListener('submit',function(event){
     // Calling
 
     let taxableIncome = calcTaxableIncome(grossSalary, nhif, nssf, nhdf)
-    document.getElementById('taxable_income').innerHTML = taxableIncome
+    document.getElementById('taxable_income').innerHTML = taxableIncome.toFixed(2)
 
     // 6. PAYEE
     // Continue with the same program and find the person's PAYEE using the taxable income above.
@@ -162,7 +162,7 @@ document.getElementById("tax_form").addEventListener('submit',function(event){
     // Calling
 
     let payee = calcPAYEE(taxableIncome);
-    document.getElementById('payee').innerHTML = payee
+    document.getElementById('payee').innerHTML = payee.toFixed(2)
 
     // 7. Net Salary
     // Continue with the same program and calculate an individual’s Net Salary using:
@@ -175,6 +175,6 @@ document.getElementById("tax_form").addEventListener('submit',function(event){
     // Calling
 
     let netSalary = calcNetSalary(grossSalary, nhif, nssf, nhdf, payee);
-    document.getElementById('net_salary').innerHTML = netSalary
+    document.getElementById('net_salary').innerHTML = netSalary.toFixed(2)
     })
 
